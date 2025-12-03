@@ -1,0 +1,68 @@
+<!-- Plugin Configuration File. Read more: https://plugins.jetbrains.com/docs/intellij/plugin-configuration-file.html -->
+<idea-plugin>
+    <!-- Unique identifier of the plugin. It should be FQN. It cannot be changed between the plugin versions. -->
+    <id>org.shaobo.GoldenFinger</id>
+
+    <!-- Public plugin name should be written in Title Case.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-name -->
+    <name>GoldenFinger</name>
+
+    <!-- A displayed Vendor name or Organization ID displayed on the Plugins Page. -->
+    <vendor email="shaobo_cn@outlook.com" url="">shaobo</vendor>
+
+    <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
+         Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
+         Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
+    <description><![CDATA[ 一个实用的文本处理工具插件。]]></description>
+
+    <!-- Product and plugin compatibility requirements.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <!-- Extension points defined by the plugin.
+         Read more: https://plugins.jetbrains.com/docs/intellij/plugin-extension-points.html -->
+    <extensions defaultExtensionNs="com.intellij">
+
+    </extensions>
+    
+    <application-components>
+    </application-components>
+
+    <project-components>
+    </project-components>
+
+    <actions>
+        <group id="org.shaobo.goldenfinger.GoldenFingerGroup" 
+               text="GoldenFinger" 
+               description="文本处理工具集"
+               popup="true"
+               icon="/icons/golden_finger.svg">
+            <add-to-group group-id="EditorPopupMenu" anchor="first"/>
+            
+            <action id="org.shaobo.goldenfinger.ToggleCaseAction" 
+                    class="org.shaobo.goldenfinger.ToggleCaseAction" 
+                    text="大小写互转" 
+                    description="根据选中内容自动转换大小写">
+            </action>
+            
+            <action id="org.shaobo.goldenfinger.ConvertTimestampAction" 
+                    class="org.shaobo.goldenfinger.ConvertTimestampAction" 
+                    text="时间戳转日期" 
+                    description="自动识别秒或毫秒时间戳并转换为日期">
+            </action>
+            
+            <action id="org.shaobo.goldenfinger.DateToTimestampAction" 
+                    class="org.shaobo.goldenfinger.DateToTimestampAction" 
+                    text="日期转时间戳" 
+                    description="将选中的日期转换为时间戳">
+            </action>
+            
+            <action id="org.shaobo.goldenfinger.SplitToCamelCaseAction" 
+                    class="org.shaobo.goldenfinger.SplitToCamelCaseAction" 
+                    text="转驼峰命名" 
+                    description="根据分隔符将选中的文本转换为驼峰命名"
+                    >
+            </action>
+        </group>
+    </actions>
+</idea-plugin>
