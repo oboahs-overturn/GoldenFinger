@@ -13,7 +13,17 @@
     <!-- Description of the plugin displayed on the Plugin Page and IDE Plugin Manager.
          Simple HTML elements (text formatting, paragraphs, and lists) can be added inside of <![CDATA[ ]]> tag.
          Guidelines: https://plugins.jetbrains.com/docs/marketplace/plugin-overview-page.html#plugin-description -->
-    <description><![CDATA[ 一个实用的文本处理工具插件。]]></description>
+    <description><![CDATA[GoldenFinger is a lightweight text processing toolkit for IntelliJ IDEA, designed to enhance developer productivity with common string manipulation tasks.
+        <p><strong>Key Features:</strong></p>
+        <ul>
+            <li><strong>Toggle Case</strong> – Convert selected text between uppercase and lowercase.</li>
+            <li><strong>Timestamp & Date Conversion</strong> – Automatically detect and convert timestamps (seconds or milliseconds) to readable dates, and vice versa.</li>
+            <li><strong>CamelCase Conversion</strong> – Transform text with separators (e.g., underscores, hyphens) into camelCase or PascalCase.</li>
+        </ul>
+
+        <p>This plugin integrates seamlessly into the editor context menu, allowing quick access without leaving your code.</p>
+        ]]>
+    </description>
 
     <!-- Product and plugin compatibility requirements.
          Read more: https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html -->
