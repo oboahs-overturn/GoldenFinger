@@ -1,6 +1,5 @@
 package org.shaobo.goldenfinger
 
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.command.WriteCommandAction
@@ -8,7 +7,7 @@ import com.intellij.openapi.ui.Messages
 import java.text.SimpleDateFormat
 import java.util.*
 
-class ConvertTimestampAction : AnAction() {
+class ConvertTimestampAction : BaseAction() {
     companion object {
         private const val DEFAULT_FORMAT = "yyyy-MM-dd HH:mm:ss"
         private val SUPPORTED_FORMATS = arrayOf(
@@ -23,14 +22,12 @@ class ConvertTimestampAction : AnAction() {
     }
 
     override fun actionPerformed(e: AnActionEvent) {
-        val editor = e.getRequiredData(CommonDataKeys.EDITOR)
-        val project = e.project ?: return
-        val document = editor.document
-        val selectionModel = editor.selectionModel
-        val selectedText = selectionModel.selectedText?.trim() ?: return
-
-        val startOffset = selectionModel.selectionStart
-        val endOffset = selectionModel.selectionEnd
+        val context = createContext(e) ?: return
+        val project = context.project
+        val document = context.document
+        val selectedText = context.selectedText
+        val startOffset = context.startOffset
+        val endOffset = context.endOffset
 
         try {
             val timestampStr = selectedText.toLong()

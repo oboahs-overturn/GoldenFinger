@@ -1,6 +1,5 @@
 package org.shaobo.goldenfinger
 
-import com.intellij.openapi.actionSystem.AnAction
 import com.intellij.openapi.actionSystem.AnActionEvent
 import com.intellij.openapi.actionSystem.CommonDataKeys
 import com.intellij.openapi.command.WriteCommandAction
@@ -9,7 +8,7 @@ import org.shaobo.goldenfinger.ui.DateTimeConversionDialog
 import java.text.SimpleDateFormat
 import java.util.*
 
-class DateToTimestampAction : AnAction() {
+class DateToTimestampAction : BaseAction() {
     companion object {
         private const val DEFAULT_INPUT_FORMAT = "yyyy-MM-dd HH:mm:ss"
         private val INPUT_FORMATS = arrayOf(
@@ -25,14 +24,12 @@ class DateToTimestampAction : AnAction() {
     }
 
     override fun actionPerformed(e: AnActionEvent) {
-        val editor = e.getRequiredData(CommonDataKeys.EDITOR)
-        val project = e.project ?: return
-        val document = editor.document
-        val selectionModel = editor.selectionModel
-        val selectedText = selectionModel.selectedText?.trim() ?: return
-
-        val startOffset = selectionModel.selectionStart
-        val endOffset = selectionModel.selectionEnd
+        val context = createContext(e) ?: return
+        val project = context.project
+        val document = context.document
+        val selectedText = context.selectedText
+        val startOffset = context.startOffset
+        val endOffset = context.endOffset
 
         // 使用自定义对话框同时选择输入格式和输出类型
         val dialog = DateTimeConversionDialog(INPUT_FORMATS, OUTPUT_TYPES)
