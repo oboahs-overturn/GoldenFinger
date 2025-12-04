@@ -59,25 +59,25 @@
             
             <action id="org.shaobo.goldenfinger.ToggleCaseAction" 
                     class="org.shaobo.goldenfinger.ToggleCaseAction" 
-                    text="大小写互转" 
+                    text="Lowercase/Uppercase  "
                     description="根据选中内容自动转换大小写">
             </action>
             
             <action id="org.shaobo.goldenfinger.ConvertTimestampAction" 
                     class="org.shaobo.goldenfinger.ConvertTimestampAction" 
-                    text="时间戳转日期" 
+                    text="Timestamp/Date"
                     description="自动识别秒或毫秒时间戳并转换为日期">
             </action>
             
             <action id="org.shaobo.goldenfinger.DateToTimestampAction" 
                     class="org.shaobo.goldenfinger.DateToTimestampAction" 
-                    text="日期转时间戳" 
+                    text="Date/Timestamp"
                     description="将选中的日期转换为时间戳">
             </action>
             
             <action id="org.shaobo.goldenfinger.SplitToCamelCaseAction" 
                     class="org.shaobo.goldenfinger.SplitToCamelCaseAction" 
-                    text="转驼峰命名" 
+                    text="toCamelCase"
                     description="根据分隔符将选中的文本转换为驼峰命名"
                     >
             </action>
