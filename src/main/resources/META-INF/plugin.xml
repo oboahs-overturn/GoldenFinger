@@ -54,7 +54,7 @@
                text="GoldenFinger" 
                description="文本处理工具集"
                popup="true"
-               icon="/icons/golden_finger.svg">
+               icon="/META-INF/pluginIcon.svg">
             <add-to-group group-id="EditorPopupMenu" anchor="first"/>
             
             <action id="org.shaobo.goldenfinger.ToggleCaseAction" 
