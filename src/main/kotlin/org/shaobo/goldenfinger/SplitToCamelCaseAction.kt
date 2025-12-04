@@ -31,7 +31,7 @@ class SplitToCamelCaseAction : AnAction() {
         val separatorNames = COMMON_SEPARATORS.map { it.second }.toTypedArray()
         val separatorName = Messages.showEditableChooseDialog(
             "请选择或输入分隔符:",
-            "转驼峰命名",
+            "toCamelCase",
             null,
             separatorNames,
             separatorNames[0],

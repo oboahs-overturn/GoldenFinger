@@ -22,7 +22,7 @@
         </ul>
         <p>This plugin integrates seamlessly into the editor context menu, allowing quick access without leaving your code.</p>
 
-        这是一个针对IntelliJ IDEA的轻量级文本处理工具包，一些常用的类型转换、字符转换能力集成在菜单栏中，快速、便捷地完成。
+        这是一个针对IntelliJ IDEA的轻量级文本处理工具包，一些常用的类型转换、字符转换能力集成在菜单栏中，功能集成在右键菜单里，无需离开编辑器就可以快速、便捷地使用。
         <p><strong>主要功能:</strong></p>
         <ul>
             <li><strong>大小写互转</strong> – 大小写互转，非全大写字符，转为大写写，全小写字符转为大写</li>
