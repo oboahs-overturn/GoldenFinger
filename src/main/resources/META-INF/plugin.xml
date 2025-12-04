@@ -20,8 +20,16 @@
             <li><strong>Timestamp & Date Conversion</strong> – Automatically detect and convert timestamps (seconds or milliseconds) to readable dates, and vice versa.</li>
             <li><strong>CamelCase Conversion</strong> – Transform text with separators (e.g., underscores, hyphens) into camelCase or PascalCase.</li>
         </ul>
-
         <p>This plugin integrates seamlessly into the editor context menu, allowing quick access without leaving your code.</p>
+
+        这是一个针对IntelliJ IDEA的轻量级文本处理工具包，一些常用的类型转换、字符转换能力集成在菜单栏中，快速、便捷地完成。
+        <p><strong>主要功能:</strong></p>
+        <ul>
+            <li><strong>大小写互转</strong> – 大小写互转，非全大写字符，转为大写写，全小写字符转为大写</li>
+            <li><strong>时间戳转日期</strong> – unix时间戳转为日期，自动识别秒、毫秒，完成指定日期格式的转换.</li>
+            <li><strong>日期转时间戳</strong> – 将指定的日期格式转为unix时间戳.</li>
+            <li><strong>驼峰转换</strong> – 将指定分割符的字符串转为驼峰命名的属性.</li>
+        </ul>
         ]]>
     </description>
 
